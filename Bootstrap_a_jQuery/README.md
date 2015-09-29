@@ -3,12 +3,9 @@
 ## Úkoly
 
 - Úkol 1 - vyzkoušet Bootstrap 3.3.5
-
 - Úkol 2 - vyzkoušet Bootstrap 4 alfa - dobrovolně
-    a) vyzkoušejte si hlavně novou komponentu card
-
+  a) vyzkoušejte si hlavně novou komponentu card
 - Úkol 3 - jQuery - naimportovat jQuery a vyzkoušet skrývání elementů na akci onclick
-
 - Úkol 4 - Bootstrap + jQuery - vytvořte jednoduchou kalkulačku
   a) nejprve zkuste sečtení 2 čísel
   b) dále operaci se dvěma čísly dle výběru (sčítání, odčítání, násobení a dělení)
