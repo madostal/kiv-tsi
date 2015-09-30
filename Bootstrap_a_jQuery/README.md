@@ -19,3 +19,9 @@
 - [jQuery tutoriál na W3schools](http://www.w3schools.com/jquery/)
 - [jQuery kalkulačka] (http://code.tutsplus.com/tutorials/creating-an-incredible-jquery-calculator--pre-8813)
 
+
+## V Bootstrapu 4 odstraněny glyphicons, zkuste náhradu:
+- [Font Awesome] (https://fortawesome.github.io/Font-Awesome/icons/)
+- [Octicons] (https://octicons.github.com/)
+
+

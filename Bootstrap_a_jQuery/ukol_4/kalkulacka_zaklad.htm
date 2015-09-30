@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sečíst dvě čísla s jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        function secti(){
+            // promenne jsou lokalni, pozor
+            var cislo1 = $("#cislo1").val();
+            var cislo2 = $("#cislo2").val();
+            var soucet = +cislo1 + +cislo2;         // pridame +, abychom z retezce udelali cislo
+
+            $("#vysledek").val(soucet);             // do inputu
+            $("#vysledek_span").text(soucet);       // do textovych elementu
+
+            console.log("soucet je: "+soucet);
+        }
+
+
+
+        $(document).ready(function(){
+
+            console.log("funkce ready - jquery běží");
+
+            // testovací alert pro kontrolu, že došlo k načtení jquery
+            //alert("pokus");
+
+
+
+            $(".calcbtn").click(function(){
+                // do stuff
+                var cislo = $(this).text();
+                console.log("stisknuto "+cislo);
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+    <button class="calcbtn"">1</button>
+    <button class="calcbtn">2</button>
+    <button class="calcbtn">3</button>
+    <button class="calcbtn">4</button>
+
+číslo 1: <input type="text" id="cislo1"/><br/>
+číslo 2: <input type="text" id="cislo2"/><br/>
+výsledek: <input type="text" id="vysledek"/>
+nebo ve spanu: <span id="vysledek_span"></span><br/>
+<button onclick="secti()">Sečti</button>
+</body>
+</html>
