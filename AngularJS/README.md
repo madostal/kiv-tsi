@@ -1,6 +1,6 @@
 # AngularJS
 
-V současné době je stabilní verze [AngularJS 1.4.7] (https://angular.io/docs/js/latest/quickstart.html). Vzhledem k tomu, že 
+V současné době je stabilní verze [AngularJS 1.4.7] (https://angularjs.org/). Vzhledem k tomu, že 
 Angular 2 je zatím pouze v Alfa verzi a vyžaduje použití balíčkovacích systémů typu npm, které nemusí na školních pc fungovat, 
 budeme pro demonstraci využívat aktuální "jedničkovou" řadu.
 
