@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="calcCtrl">
+
+    <h3>Kalkulačka</h3>
+    <div>
+        <h1>{{hlavni}}</h1>
+        <div ng-repeat="cislo in cisla" style="float: left;">
+            <button ng-click="stisk(cislo)">{{cislo}}</button>
+            <div ng-show="($index+1) % 3 == 0 && $index > 0" style="clear: both;"></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('calcCtrl', function($scope) {
+        $scope.cisla = [];
+        $scope.hlavni = "";
+
+        var pom = 0;
+        for ($i = 9; $i > 0; $i--){
+            $scope.cisla.push($i);
+        }
+
+
+        //console.log($scope.osoby);
+        $scope.stisk = function(cislo) {
+            console.log("stisknuto: " + cislo);
+            $scope.hlavni += cislo;
+        }
+
+
+    });
+</script>
+
+</body>
+</html>

@@ -13,7 +13,8 @@
         <h3>Přímý výpis v rámci výrazu</h3>
         <ul>
             <li ng-repeat="osoba in osoby">{{ $index+1 + '. ' + osoba.jmeno + ' ' + osoba.prijmeni}}
-                <button ng-click="smaz($index)">smaž</button></li>
+                <button ng-click="smaz($index)">smaž</button>
+                <button ng-click="edit($index)">edituj</button></li>
         </ul>
 
         <h3>Výpis s využitím funkce</h3>
@@ -31,7 +32,10 @@
         <button ng-click="add()">Přidej</button>
 
         <h3>Delete - u seznamu</h3>
-        <h3>Todo 3 - edit</h3>
+        <h3>Edit</h3>
+        <input type="text" ng-model="editosoba_jmeno"/>
+        <input type="text" ng-model="editosoba_prijmeni"/>
+        <button ng-click="save($index)">ulož</button>
     </div>
 
     <script>
@@ -48,6 +52,7 @@
             // insert - nova osoba
             $scope.novaosoba_jmeno = "";
             $scope.novaosoba_prijmeni = "";
+            $scope.editosoba_index = -1;
 
             $scope.add = function () {
                 console.log($scope.novaosoba_jmeno + " "+ $scope.novaosoba_prijmeni);
@@ -56,6 +61,17 @@
 
             $scope.smaz = function (index) {
                 $scope.osoby.splice(index, 1);
+            }
+
+            $scope.edit = function (index) {
+                $scope.editosoba_index = index;
+                $scope.editosoba_jmeno = $scope.osoby[index].jmeno;
+                $scope.editosoba_prijmeni = $scope.osoby[index].prijmeni;
+            }
+
+            $scope.save = function () {
+                console.log($scope.editosoba_jmeno + " " + $scope.editosoba_prijmeni);
+                $scope.osoby[$scope.editosoba_index] = {"jmeno" : $scope.editosoba_jmeno, "prijmeni" : $scope.editosoba_prijmeni};
             }
         });
     </script>
